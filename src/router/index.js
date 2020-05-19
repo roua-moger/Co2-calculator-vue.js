@@ -1,10 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import Co2Calculator from '@/views/Co2Calculator';
 
 Vue.use(VueRouter)
 
   const routes = [
+  {
+    path: '/',
+    name: 'Co2',
+    component: Co2Calculator
+  },
  
 ]
 

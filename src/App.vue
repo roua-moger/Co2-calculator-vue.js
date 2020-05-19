@@ -1,16 +1,28 @@
 <template>
-  <div class="container">
-    <div>
-     <b-button-group>
-      <b-button>Button 1</b-button>
-      <b-button>Button 2</b-button>
-      <b-button>Button 3</b-button>
-    </b-button-group>
+  <div id="app">
+   <div id="nav">
+      <router-link to="/"> </router-link>
+    </div>
+    <router-view />
   </div>
-    
-  </div>
+  
 </template>
 
-<style lang="scss">
+<script>
 
+export default {
+  name: 'app',
+  
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>
