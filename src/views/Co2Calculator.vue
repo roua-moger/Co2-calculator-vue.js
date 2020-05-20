@@ -24,7 +24,7 @@
     <b-form-input v-model="distance" placeholder="Enter your distance" class="input"></b-form-input>
     <button @click="toMeter">m</button> 
     <button @click="toKiloMeter">km</button>
-    <div class="times">{{value || '0'}} g (CO2) *  {{ distance}} <span v-if="meter">m</span> (distance)</div>
+    <div class="times">{{value || '0'}} g (CO2) *  {{ distance}}  (distance)</div>
     <h3 class="text-primary">Your trip caused "{{times}}"  of CO2-equivalent</h3>
 
   </div>
@@ -39,14 +39,12 @@ export default {
         value: '',
         previous: null,
         operatorClicked: false,
-        meter: false,
-        
       }
   
     },
     computed:{
       times: function (){
-          return this.value * this.distance
+          return this.value * this.distance;
       },
     },
       methods: {
@@ -64,12 +62,13 @@ export default {
         },
         toMeter(){
           this.distance = `${parseFloat(this.distance) * 1000}`;
-         if (this.meter) {
-           this.meter= false;
-         }
+              this.distance = this.distance.charAt(0) === 'm' ? 
+        this.distance.slice(1) : `${this.distance} m`;
         },
         toKiloMeter(){
           this.distance = `${parseFloat(this.distance) / 1000}`;
+          this.distance = this.distance.charAt(0) === 'km' ? 
+        this.distance.slice(1) : `${this.distance} km`;
         }
       },
 }
