@@ -1,6 +1,8 @@
 # co2-calculator
 Buildind a CO2 emission Calculator with Vue.js
 
+you can run it with npm run serve
+
 ## Project setup
 ```
 npm install
