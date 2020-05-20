@@ -1,4 +1,5 @@
 # co2-calculator
+Buildind a CO2 emission Calculator with Vue.js
 
 ## Project setup
 ```
