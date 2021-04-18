@@ -14,6 +14,8 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
+Vue.component('todo', require('./components/Todo.vue').default);
+
 Vue.config.productionTip = false
 
 new Vue({
